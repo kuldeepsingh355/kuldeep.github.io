@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuldeep Singh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+			padding-left:55%;
+            left: 0;
+            background-color: transparent;
+            z-index: 999;
+            transition: background-color 0.5s ease;
+        }
+
+        nav.scrolled {
+            background-color:  #4682B4; /* Green background when scrolled */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+
+        section {
+            padding: 100px 0;
+            min-height: 100vh;
+			 display: flex;
+			justify-content: center;
+        }
+
+        header {
+            text-align: center;
+            background-image: url('bkg.jpg');
+            background-size: cover;
+            height: 100vh;
+			width: 100%;
+			height: 500px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .profile-pic img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about, #skills, #articles, #experience, #education {
+            padding: 100px 0;
+        }
+
+          .container {
+            width: 80%;
+            padding: 40px;
+            background-color: #fff;
+            text-align: center; /* Centers text inside the container */
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), /* First layer of shadow */
+                        10px 10px 50px rgba(0, 0, 0, 0.1); /* Second deeper layer */
+            border-radius: 10px;
+            transform: translateZ(0); /* Helps to improve performance with shadows */
+        }
+
+        /* Center the container vertically */
+        .centered-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Styling for the text */
+        .container h1 {
+            font-size: 36px;
+            color: #333;
+            margin: 0;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px;
+
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+		
+		#social {
+    text-align: center;
+	margin-top:-20px;
+}
+
+#social a {
+    color: #333;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="profile-pic">
+                <img src="center.jpg" alt="Profile Picture">
+            </div>
+            <h1>Kuldeep Singh</h1>
+            <p>Java Web Developer</p>
+        </div>
+    </header>
+	
+     <div id="social">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://stackoverflow.com/users/your-profile" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+            <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+      
+    </div>
+
+    <section id="about" >
+        <div class="container">
+            <h2>About</h2>
+            <p>Software Development Professional with 14 Years of Experience in the Financial Services Industry
+A seasoned IT professional with over 14 years of expertise in software development and maintenance, specializing in designing and delivering robust technical solutions using Java 8, Spring Framework, and related technologies. Strong proficiency in multi-tier application design and implementation across a range of modern tools and frameworks, including Spring Boot, Struts, Kafka, Kubernetes, Docker, RESTful Web Services, Oracle Coherence, JPA, and PL/SQL.
+Proven track record in driving the full Software Development Life Cycle (SDLC) within Agile environments, from requirements gathering to deployment, with particular strengths in object-oriented programming (OOP), design patterns, and building scalable, distributed systems.
+</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <p>Skills content goes here.</p>
+        </div>
+    </section>
+
+    <section id="articles">
+        <div class="container">
+            <h2>Articles</h2>
+            <p>Articles content goes here.</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <p>Experience content goes here.</p>
+        </div>
+    </section>
+	   <div class="snowflake" style="left: 5%; animation-duration: 12s; top: -50px;"></div>
+    <div class="snowflake" style="left: 25%; animation-duration: 14s; top: -50px;"></div>
+    <div class="snowflake" style="left: 50%; animation-duration: 16s; top: -50px;"></div>
+    <div class="snowflake" style="left: 75%; animation-duration: 10s; top: -50px;"></div>
+    <div class="snowflake" style="left: 90%; animation-duration: 18s; top: -50px;"></div>
+
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <p>Education content goes here.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kuldeep Singh - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Change Navbar background on scroll
+        window.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            const aboutSection = document.getElementById("social").offsetTop;
+
+            if (window.pageYOffset >= aboutSection - 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+			
+        });
+		
+		
+    </script>
+</body>
+</html>
