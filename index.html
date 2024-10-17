@@ -158,6 +158,37 @@
     text-decoration: none;
 }
 
+	     /* Container for the postcard */
+    .postcard {
+      width: 400px;
+      height: 300px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Styling the iframe */
+    .postcard iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Optional - Adding a title or header */
+    .postcard-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f8f8f8;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
     </style>
 </head>
 <body>
@@ -213,9 +244,12 @@ Proven track record in driving the full Software Development Life Cycle (SDLC) w
     <section id="articles">
         <div class="container">
             <h2>Articles</h2>
-		<p><a href="https://medium.com/@kuldeep07222/why-you-should-avoid-if-else-statements-in-java-and-what-to-use-instead-c46de9d1d531" previewlistener="true"><i class="fa fa-medium"></i> Read More on Medium</a>
-<a href="https://medium.com/@kuldeep07222/efficient-alternatives-to-resource-heavy-java-constructs-0d5cbabddddc" previewlistener="true"><i class="fa fa-medium"></i> Read More on Medium</a></p>
-            </div>
+	    <div class="postcard">
+    <div class="postcard-header">
+      Medium Article
+    </div>
+    <iframe src="https://medium.com/@kuldeep07222/efficient-alternatives-to-resource-heavy-java-constructs-0d5cbabddddc" title="Medium Article"></iframe>
+  </div>
     </section>
 
     <section id="experience">
