@@ -14,7 +14,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             color: #333;
         }
@@ -32,7 +32,7 @@
         }
 
         nav.scrolled {
-            background-color:  #4682B4; /* Green background when scrolled */
+            background-color:  #218838; /* Green background when scrolled */
         }
 
         nav ul {
@@ -59,6 +59,21 @@
 			 display: flex;
 			justify-content: center;
         }
+		
+		 .hexagon1	 {
+            width: 150px;
+            height: 55px;
+            background-color: #6c757d;
+            position: relative;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+        }
+
 
         header {
             text-align: center;
@@ -74,13 +89,7 @@
             align-items: center;
         }
 
-        h1 {
-            font-size: 3rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
+      
 
         .profile-pic img {
             border-radius: 50%;
@@ -122,17 +131,20 @@
 
         /* Styling for the text */
         .container h1 {
-            font-size: 36px;
+		 font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
             color: #333;
             margin: 0;
         }
 
         .container p {
-            font-size: 18px;
+		     font-family: Arial, sans-serif;
             color: #555;
             margin: 10px;
 
         }
+		
+
 
         /* Smooth Scrolling */
         html {
@@ -158,7 +170,7 @@
     text-decoration: none;
 }
 
-	     /* Container for the postcard */
+ /* Container for the postcard */
     .postcard {
       width: 400px;
       height: 300px;
@@ -188,10 +200,67 @@
       font-weight: bold;
       border-bottom: 1px solid #ddd;
     }
+	
+	 .hexagon {
+            width: 100px;
+            height: 55px;
+            background-color: #6c757d;
+            position: absolute;
+            display: none; /* Start hidden */
+        }
+
+        .hexagon:before, .hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+
+        .hexagon:before {
+            bottom: 100%;
+            border-bottom: 27.5px solid #6c757d;
+        }
+
+        .hexagon:after {
+            top: 100%;
+            border-top: 27.5px solid #6c757d;
+        }
+
+        .hex-container {
+            position: relative;
+            height: 500px; /* Container height */
+            margin-top: 500px;
+            overflow: hidden;
+            z-index: 1;
+        }
+		
+		.table-container {
+    display: flex;           /* Use flexbox for alignment */
+	align:center;
+    justify-content: center; /* Center horizontally */
+}
+
+table {
+    border-collapse: collapse; /* Optional: collapses borders */
+    width: 100%;                /* Set table width */
+    max-width: 100%;         /* Optional: max width for responsiveness */
+}
+
+th, td {
+    padding: 8px;             /* Cell padding */
+    text-align: center;       /* Center text inside cells */
+}
+		
+		
 
     </style>
 </head>
 <body>
+<div id="hexContainer">
+ <div class="hexagon" id="hex1"></div>
+            <div class="hexagon" id="hex2"></div>
+			<div class="hexagon" id="hex3"></div>
     <nav id="navbar">
         <ul>
             <li><a href="#about">About</a></li>
@@ -213,17 +282,20 @@
     </header>
 	
      <div id="social">
-            <a href="https://www.linkedin.com/in/kuldeepsingh07222/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://stackoverflow.com/users/your-profile" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-            <a href="https://github.com/kuldeepsingh355/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
       
     </div>
 
+            
     <section id="about" >
         <div class="container">
             <h2>About</h2>
-            <p>Software Development Professional with 14 Years of Experience in the Financial Services Industry
-A seasoned IT professional with over 14 years of expertise in software development and maintenance, specializing in designing and delivering robust technical solutions using Java 8, Spring Framework, and related technologies. Strong proficiency in multi-tier application design and implementation across a range of modern tools and frameworks, including Spring Boot, Struts, Kafka, Kubernetes, Docker, RESTful Web Services, Oracle Coherence, JPA, and PL/SQL.
+            <p>Software Development Professional with 11 Years of Experience in the Financial Services Industry
+A seasoned IT professional with over 11 years of expertise in software development and maintenance, specializing in designing and delivering robust technical solutions using Java 8, Spring Framework, and related technologies. Strong proficiency in multi-tier application design and implementation across a range of modern tools and frameworks, including Spring Boot, Struts, Kafka, Kubernetes, Docker, RESTful Web Services, Microservice ,SQL, Oracle Database
+<br/>
+<br/>
 Proven track record in driving the full Software Development Life Cycle (SDLC) within Agile environments, from requirements gathering to deployment, with particular strengths in object-oriented programming (OOP), design patterns, and building scalable, distributed systems.
 </p>
         </div>
@@ -232,54 +304,53 @@ Proven track record in driving the full Software Development Life Cycle (SDLC) w
     <section id="skills">
         <div class="container">
             <h2>Skills</h2>
-            <p>•	Java and Spring expertise
-•	Strong unit testing and automation testing skills using JUnit, TestNG, and Selenium
-•	Experience with defect tracking and management tools like JIRA and Quality Center
-	Java 8,Kafka,Spring MVC,Kubernetes,Spring Boot,Hibernate,JPA,SQL,Mongo DB,DevOps,Docker,JavaScript,GraphQL,Microservices,Git
-        ,Maven,SVN,Apache Tomcat & JBoss & WildFly & Websphere
-</p>
+			<table class="table-container">
+			<tr>
+			<td>
+			 <div class="hexagon1">Java 8</div>
+			 <div class="hexagon1">Spring MVC</div>
+			 <div class="hexagon1">Spring Boot</div>
+			 <div class="hexagon1">JPA</div>
+			 </td>
+			<td>
+			 <div class="hexagon1">SQL</div>
+			 <div class="hexagon1">Kafka</div>
+			 <div class="hexagon1">Kubernetes</div>
+			 <div class="hexagon1">Hibernate</div>
+			 </td>
+			 <td>
+			 <div class="hexagon1">GraphQL</div>
+			 <div class="hexagon1">Rest</div>
+			 <div class="hexagon1">Docker</div>
+			 <div class="hexagon1">Java 8</div>
+			 </td>
+			 <td>
+			 <div class="hexagon1">WildFly</div>
+			 <div class="hexagon1">Maven</div>
+			 <div class="hexagon1">Microservice</div>
+			 <div class="hexagon1">DevOps</div>
+			 </td>
+			 </tr>
+			 </table>
         </div>
     </section>
 
     <section id="articles">
         <div class="container">
             <h2>Articles</h2>
-	    <div class="postcard">
-    <div class="postcard-header">
-      Medium Article
-    </div>
-    <iframe src="https://medium.com/@kuldeep07222/efficient-alternatives-to-resource-heavy-java-constructs-0d5cbabddddc" title="Medium Article"></iframe>
-  </div>
+            <p><a href="https://medium.com/@kuldeep07222">Medium</a></p>
+			<p><a href="https://kuldeep07222.substack.com/">SubStack</a></p>
+			<h2>Plugin published on Microsoft</h2>
+            <p><a href="https://medium.com/@kuldeep07222">Tab Manager Pro</a></p>
+        </div>
     </section>
 
     <section id="experience">
         <div class="container">
             <h2>Experience</h2>
-            <p>Team lead At Capgemini
-
-	Fault Management System (FM) for Nokia 
-
-The Nokia Fault Management System (FM) monitors, detects, and addresses network issues by analyzing events and alarms across the network. This project involved implementing and enhancing Nokia's FM to provide real-time alerts for network disruptions, track faults, and perform corrective actions automatically or manually. It helped improve service reliability by ensuring timely fault detection and resolution in large-scale telecom networks
-
-Role and Responsibilities:
-•	Implemented fault management features: Developed and Enhanced few modules for FM.
-•	Event and alarm management: Integrated real-time alarms for network issues and provided tools to categorize, filter, and respond to them.
-•	Performance Optimization: Improved system performance for faster fault detection and enhanced alert processing capabilities.
-•	Collaborated with cross-functional teams: Worked with network engineers, database administrators, and business stakeholders to deliver project goals.
-•	Documentation and Testing: Ensured thorough testing of fault scenarios and documented procedures for the deployment and maintenance of the system.
-</p>
-		<p>  Senior Software Engineer at Tavant Technologies, Bangalore
-     
-	Warranty System for IR customer. (Europe)
-Environment: Java 8, Spring, Microservices, Spring Boot, SQL Server, Maven, REST Web Services, Jenkins, AWS web service, jQuery, WildFly server.
-IR Warranty is a flexible, user-friendly, and effective one-stop warranty management solution for the complete warranty lifecycle of original equipment manufacturers. Its unique cross-functional integration leads to a rapid reduction in warranty costs and reserves, increased supplier recovery, enhanced reserves forecasting accuracy, and better cash flow that help maximize profitability. The integrated workflow in our warranty management solution allows all stakeholders to collaborate and contribute to reduced warranty spend, improved product quality, and enhanced end-customer satisfaction.
-Roles and Responsibilities:
-•	Involved in Requirement and Analysis
-•	Design and Coding
-•	Full Stack developer
-•	Junit Testing
-•	Automation testing
-</p>
+            <p>Capegemini as Team Lead - Currently </p>
+			<p>Tavant Technologies as Sr Software Engineer </p>
+			<p>Sasken Communication as Software Engineer </p>
         </div>
     </section>
 	   <div class="snowflake" style="left: 5%; animation-duration: 12s; top: -50px;"></div>
@@ -293,10 +364,9 @@ Roles and Responsibilities:
         <div class="container">
             <h2>Education</h2>
             <p>MCA</p>
-		 <h2>Publish My Plugin on Microsoft</h2>
-            <p><a href="https://microsoftedge.microsoft.com/addons/detail/nkhjhfbobgiogdiigmbaghomdilpmfod" previewlistener="true"><i class="fa fa-medium"></i>Tab Manager Prod</a>
         </div>
     </section>
+	   </div>
 
     <footer>
         <p>&copy; 2024 Kuldeep Singh - All Rights Reserved</p>
@@ -315,6 +385,62 @@ Roles and Responsibilities:
             }
 			
         });
+		
+		  function moveHexagon(hex) {
+        const container = document.getElementById('hexContainer');
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
+        const aboutSection = document.getElementById('about');
+        const aboutTop = aboutSection.offsetTop;
+        const aboutHeight = aboutSection.offsetHeight;
+
+        let posX = 0; // Start position X
+        let posY = Math.random() * containerHeight; // Random start position Y
+        let speedX = (Math.random() * 2) + 2; // Random speed in X direction
+        let speedY = (Math.random() * 2) - 1; // Random speed in Y direction (can be negative)
+
+        hex.style.display = 'block'; // Make the hexagon visible
+        hex.style.left = posX + 'px';
+        hex.style.top = posY + 'px';
+
+        function move() {
+            posX += speedX;
+            posY += speedY;
+
+            // Check if hexagon hits the left or right boundary of the container
+            if (posX + hex.offsetWidth >= containerWidth || posX <= 0) {
+                speedX = -speedX; // Reverse X direction
+            }
+
+            // Check if hexagon hits the top boundary or moves beyond the "about" section
+            if (posY + hex.offsetHeight >= aboutTop + aboutHeight || posY <= 0) {
+                speedY = -speedY; // Reverse Y direction
+            }
+
+            hex.style.left = posX + 'px';
+            hex.style.top = posY + 'px';
+
+            // Call the move function again on the next animation frame
+            requestAnimationFrame(move);
+        }
+
+        move();
+    }
+
+    // Function to start hexagon movement after a delay
+    function startHexagonMovement() {
+        const hex1 = document.getElementById('hex1');
+        const hex2 = document.getElementById('hex2');
+        const hex3 = document.getElementById('hex3');
+
+        // Delayed start for hexagons
+        setTimeout(() => moveHexagon(hex1), 1000); // Starts after 1 second
+        setTimeout(() => moveHexagon(hex2), 3000); // Starts after 3 seconds
+        setTimeout(() => moveHexagon(hex3), 5000); // Starts after 5 seconds
+    }
+
+    // Start movement when page loads
+    window.onload = startHexagonMovement;s
 		
 		
     </script>
